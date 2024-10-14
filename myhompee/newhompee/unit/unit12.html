@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 단원 !</title>
+    <link rel="stylesheet" href="../../css/mainhome.css">
+</head>
+<body>
+
+    <header>
+        <h1><a href="../mainhome.html">mini project !</a></h1>
+      </header>
+
+      <div class="container">
+        <nav class="navi">
+          <ul>
+            <li><a href="../mainhome.html">홈</a></li>
+            <!-- <li><a href="#mini">미니실습</a></li> -->
+            <li><a href="../newpost.html">게시글</a></li>
+            <li><a href="guest">방명록</a></li>
+          </ul>
+        </nav>
+      </div>
+    
+      <main>
+    
+    
+        <div class="content">
+          
+            <div id="twelve" class="contents">
+                <h2>12 단원 - 반응형 웹과 미디어 쿼리</h2>
+                <p>반응형 웹</p>
+                <h3>뷰포트</h3>
+                <ul>
+                  <li>vw : 1vw는 뷰포트 너비의 1%와 같다</li>
+                  <li>vh : 1vh는 뷰포트 높이의 1%와 같다</li>
+                  <li>vmin : 뷰포트의 너비와 높이중에서 작은 값의 1%와 같다</li>
+                  <li>vmax : 뷰포트의 너비와 높이중에서 큰 값의 1%와 같다</li>
+                </ul>
+                <h3>미디어 쿼리</h3>
+                <ul>
+                  <li>미디어 쿼리 : 접속하는 장치에 따라 특정한 css 스타일을 사용</li>
+                  <li>@media [only | not ] : 미디어 유형 [and 조건] * [and 조건]</li>
+                  <p>>> only : 미디어 쿼리를 지원하지 않는 웹 부라우저에서 미디어 쿼리를 무시하고 실행하지 않음</p>
+                  <p>>> not : not 다음에 지정하는 미디어 유형은 제외</p>
+                  <p>>> and : 조건을 여러개 연결해서 추가할수 있음</p>
+                  <p>>> @media screen and (min-whdth: 760x) and (max-width:1489) {...}</p>
+                </ul>
+        
+                <h3>그리드 레이아웃 (1차원)</h3>
+                <ul>
+                  <li>플렉스 박스 레이아웃</li>
+                  <p>>> 수평이나 수직 중 하나를 주축으로 정하고 박스를 배치</p>
+                  <p>>> 여유공간이 생길경우 너비나 높이를 적절하게 늘리거나 줄일수 있음</p>
+                  <li>css 그리드 레이아웃</li>
+                  <p>>> 수평이나 수직 어디로든 배치 가능</p>
+                  <p>>> 요소를 레고블록 끼워 맞추듯 배치 가능</p>
+                </ul>
+                <h3>플랙스 박스 레이아웃</h3>
+                <ul>
+                  <li>플렉스 박스 레이아웃</li>
+                  <p>그리드 레이아웃을 기본으로, 플렉스 박스를 원하는 위치에 배치 함</p>
+                  <p>여유 공간에 따라 너비나 높이, 위치를 자유롭게 변형할 수 있음</p>
+        
+                  <li>display : 배치 요소들을 감싸는 부모요소를 플렉스 컨테이너로 지정</li>
+                  <p>>> flex : 컨테이너 안의 플렉스 항목을 블록 레벨 요소로 배치함\</p>
+                  <p>>> inline-flex : 컨테이너 안의 플렉스 항목을 인라인 레벨 요소로 배치</p>
+        
+                  <li>flex-direction : 플렉스 항목의 배치를 위해 주축과 방향 지정</li>
+                  <p>>> row : 가로, 왼쪽에서 오른쪽으로 배치 (기본값)</p>
+                  <p>>> row-reverse : 가로, 오른쪽에서 왼쪽 배치</p>
+                  <p>>> column : 세로, 위쪽에서 아래쪽으로 배치</p>
+                  <p>>> column-reverse : 세로, 아래쪽에서 위쪽으로 배치</p>
+        
+                  <li>flex-wrap : 플렉스 항목을 한줄 또는 여러줄로 배치</li>
+                  <p>>> nowrap : 플렉스 항복을 한줄로 표시 (기본값)</p>
+                  <p>>> wrap : 플렉스 항목을 여러줄에 표시</p>
+                  <p>>> wrap-reverse : 여러줄이 표시되지만 화면을 줄이면 끝줄부터 위로 올라감</p>
+        
+                  <li>justify-content : 플렉스 항목을 주축 방향으로 배치할 때의 배치 기준</li>
+                  <p>>> flex-steart : 시작점 배치</p>
+                  <p>>> flex-end : 끝점 배치</p>
+                  <p>>> center : 중앙 배치</p>
+                  <p>>> space-between : 시작점과 끝점에 배치후 그사이 같은 간격 배치</p>
+                  <p>>> space-around : 모두 같은 간격 배치</p>
+        
+                  <li>align-items : 교차축을 기준으로 하는 배치 방법</li>
+                  <li>align-self : 교차축에서 특정 항목만 지정하고 싶다면 align-self 사용</p>
+                    <p>>> flex-steart : 시작점 배치</p>
+                    <p>>> flex-end : 끝점 배치</p>
+                    <p>>> center : 중앙 배치</p>
+                    <p>>> baseline : 문자 기준선에 맞춰 배치</p>
+                    <p>>> stretch : 플렉스 항목을 늘려 교차축에 가득차게 배치</p>
+        
+                  <li>align-content : 플렉스 항목이 여러 줄로 표시될 때 교차 축 기준의 배치 방법 지정</li>
+                  <p>>> flex-steart : 시작점 배치</p>
+                  <p>>> flex-end : 끝점 배치</p>
+                  <p>>> center : 중앙 배치</p>
+                  <p>>> space-between : 시작점과 끝점에 배치후 그사이 같은 간격 배치</p>
+                  <p>>> space-around : 모두 같은 간격 배치</p>
+                  <p>>> stretch : 플렉스 항목을 늘려 교차축에 가득차게 배치</p>
+                  </li>
+                </ul>
+                <h3>css 그리드 레이아웃 (2차원)</h3>
+                <ul>
+                  <li>플렉스 박스 레이아웃은 주축/교차축 개념이 있지만, CSS 그리드 레이아웃은 양쪽 방향 모두 사용</li>
+                  <li>가로(row)와 세로(column)로 화면을 구성하고, 줄과 칼럼 사이의 여백을 조절</li>
+                  <li>display : 배치 요소들을 감싸는 부모 요소를 그리드 컨테이너로 지정</li>
+                  <p>>> gird : 컨테이너속 항목을 블록으로 배치</p>
+                  <p>>> inline-grid : 컨테이너속 항목을 인라인으로 배치</p>
+        
+                  <li>grid-template-columns : 칼럼 개수와 너빗값</li>
+                  <li>grid-template-rows: 줄 개수와 너빗값</li>
+        
+                  <li>상대적인 크기를 지정하는 fr 단위</li>
+                  <p>>> 반응형 웹 디자인을할땐 상대적인 크기를 지정하는 fr(fraction) 단위 사용</p>
+                  <p>>> 너비 2:1:2 배치시 --> grid-template-columns: 2fr 1fr 2fr;</p>
+        
+                  <li>값이 반복된다면 repeat( ) 함수</li>
+                  <p>grid-template-columns: 1fr 1fr 1fr; --> grid-template-columns: repeat(3, 1fr)</p>
+                  <li>auto-fill, auto-fit : 화면 너비에 따라 칼럼 개수를 조절음</li>
+                  <p>>> auto-fit : 남는 공간 없이 꽉 채우기</p>
+                  <p>>> auto-fill : 칼럼의 최소 너비까지만 표시하고 남는 공간은 그대로 둠</p>
+        
+                  <li>그리드 라인</li>
+                  <p>레이아웃에는 눈에 보이지 않는 그리드 라인이 포함되어 있어 그리드 항목을 배치할 수 있음</p>
+                  <p>>> grid-column-start: 번호 : 칼럼 시작 라인의 번호 지정</p>
+                  <p>>> grid-column-end: 번호 : 칼럼 마지막 라인 번호 지정</p>
+                  <p>>> grid-column: 번호/번호 : 칼럼 시작과 끝 번호를 넣어 사용</p>
+                  <p>>> grid-end-start: 번호 : 줄 시작 라인 번호 지정</p>
+                  <p>>> grid-row-end: 번호 : 줄 마지막 라인 번호 지정</p>
+                  <p>>> grid-row: 번호/번호 : 줄 시작과 끝번호 넣어 사용</p>
+        
+                  <li>템플릿 영역</li>
+                  <p>grid-area: 템플릿 영역을 만든 후 배치</p>
+        
+                </ul>
+        
+        
+        
+        
+              </div>
+        </div>
+
+        <div class="sidebar">
+            <!-- <aside class="profile">
+              <img src="../img/강아지.jpg" alt="프로필 사진" class="profile-img">
+              <p id="username">전효정</p>
+              <a href="https://github.com/kyn04221" target="_blank">
+                <img src="../img/깃허브그레이.PNG" alt="깃허브" class="profile-png"></a>
+              <p id="myself">안녕하세요 자기소개 입니다</p> -->
+            </aside>
+      
+            <nav class="category">
+              <ul class="tt_category">
+                <li class=""><a href="/category" class="link_tit"> 게시글 전체보기 </a>
+                  <ul class="category_list">
+                    <li class><a href="../post2.html" class="link_item"> 미니 실습 ! </a>
+                      <ul class="sub_category_list">
+                        <li class=""><a href="menulist.html" class="link_sub_item"> 점메추 </a></li>
+                        <li class=""><a href="unit13.html" class="link_sub_item"> 13 단원 </a></li>
+                        <li class=""><a href="unit12.html" class="link_sub_item"> 12 단원 </a></li>
+                        <li class=""><a href="unit11.html" class="link_sub_item"> 11 단원 </a></li>
+                        <li class=""><a href="unit10.html" class="link_sub_item"> 10 단원 </a></li>
+                        <li class=""><a href="unit9.html" class="link_sub_item"> 9단원 </a></li>
+                        <li class=""><a href="unit8.html" class="link_sub_item"> 8단원 </a></li>
+                        <li class=""><a href="unit7.html" class="link_sub_item"> 7 단원 </a></li>
+                        <li class=""><a href="unit6.html" class="link_sub_item"> 6 단원 </a></li>
+                        <li class=""><a href="unit5.html" class="link_sub_item"> 5 단원 </a></li>
+                        <li class=""><a href="unit4.html" class="link_sub_item"> 4 단원 </a></li>
+                        <li class=""><a href="unit3.html" class="link_sub_item"> 3 단원 </a></li>
+                        <li class=""><a href="unit1-2.html" class="link_sub_item"> 1~2 단원 </a></li>
+                      </ul>
+                    </li>
+      
+                    <li class><a href="/category/Front-End" class="link_item"> 사부작 사부작 </a>
+                      <ul class="sub_category_list">
+                        <li class=""><a href="../test/todo-list.html" class="link_sub_item"> todo list</a></li>
+                       <li class=""><a href="" class="link_sub_item"> before : minihompee </a></li>
+                       <li class=""><a href="" class="link_sub_item"> wtudy with us ! </a></li>
+                      </ul>
+                    </li>
+      
+                  </ul>
+                </li>
+              </ul>
+      
+            </nav>
+          </div>
+
+
+      </main>
+    
+</body>
+</html>

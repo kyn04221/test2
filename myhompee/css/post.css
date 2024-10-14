@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background-color: #fafafa; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 모든 자식 요소들을 가로 중앙 정렬 */
+  max-height: 1335px;
+}
+
+a {
+
+  color: black;
+  text-decoration: none;
+}
+
+
+h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+
+.container {
+  /* margin-left: 300px; */
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #E5E5E5;
+  /* flex-wrap: wrap; 콘텐츠 줄바꾸기 */
+  justify-content: center;
+}
+
+
+main {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  width: 60%;
+  /* 패딩마진x 선 끊김*/
+
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+.sidebar {
+  border-left: 1px solid #E5E5E5;
+  height: 1120px;
+  padding-left: 20px;
+}
+
+.profile {
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 70px;  */
+  width: 150px;
+  /* 1:4 비율 */
+  padding: 20px;
+  /* border-right: 2px solid #ccc; */
+  padding: 30px;
+  padding-top: 70px;
+}
+
+#profile-menu-container {
+  display: flex;
+  flex-direction: column;
+  /* 세로 정렬 */
+  margin-right: 40px;
+  /* 스터디 그룹과의 간격 */
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-png {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* ---------------------------------------------------------------------------------------------- */
+
+
+.navi {
+  width: 0 auto;
+  height: 60px;
+  padding-bottom: 10px;
+  /* border-bottom: 2px solid #ccc; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navi ul {
+  list-style: none;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.navi ul li {
+  display: inline-block;
+  width: 150px;
+  padding: 10px;
+}
+
+.navi ul li a {
+  color: black;
+}
+
+.navi a:link,
+.navi a:visited {
+  font-size: 14px;
+  padding: 10px;
+  text-decoration: none;
+  /* 밑줄 없음 */
+
+}
+
+.navi ul li a {
+  color: black;
+  display: inline-block;
+  /* 크기를 가지게 하기 위해 추가 */
+  transition: transform 0.2s ease-in-out;
+  /* 부드러운 튀는 효과 */
+}
+
+.navi a:hover,
+.navi a:focus {
+  /* background-color: #222; */
+  color: #222;
+  transform: scale(1.2);
+  /* 살짝 커지는 효과 */
+
+}
+
+
+/* .navi a:active {
+  ackground-color: black;
+  
+} */
+
+/* ---------------------------------------------------------------------------------------------- */
+
+.content {
+  display: flex;
+  width: 1020px;
+  flex-wrap: wrap;
+  /* 줄바꿈 가능하게 설정 */
+  justify-content: left;
+  /* 포스트 간의 간격을 자동으로 설정 */
+  padding-top: 70px;
+  padding-left: 100px;
+  margin-left: 5%;
+  /* border-left: 2px solid #ccc; */
+  max-width: 1200px;
+  /* 최대 너비 설정 (원하는 크기로 조정 가능) */
+
+}
+
+.contents {
+  display: flex;
+  width: 100%;
+  /* margin: 30px auto; */
+  /* margin-top: 10%; */
+  /* margin-left: 20%; */
+  flex-direction: column;
+  /* 세로로 */
+  justify-content: center;
+  /*세로방향 가운데정렬*/
+  /* align-items: center;  */
+
+  /* 텍스트 */
+  /* text-align: left; */
+
+
+
+  /* padding: 30px;  */
+
+  border-bottom: 1px dashed #222;
+  border-radius: 5px;
+
+
+
+}
+
+#ten:target {
+  background-color: #0069e0;
+  /* 배경색 - 파란색 */
+  color: #fff;
+  /* 글자색 - 흰색 */
+}
+
+#room:target {
+  background-color: #ff9844;
+  /* 배경색 - 주황색 */
+}
+
+#reservation:target {
+  background-color: #fff8dc;
+  /* 배경색 - 베이지색 */
+}
+
+/* #ds {
+    width: 720px;
+    height: 340px;
+    margin-bottom: 10px;
+} */

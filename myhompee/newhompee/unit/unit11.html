@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 단원 !</title>
+    <link rel="stylesheet" href="../../css/mainhome.css">
+</head>
+<body>
+
+    <header>
+        <h1><a href="../mainhome.html">mini project !</a></h1>
+      </header>
+
+      <div class="container">
+        <nav class="navi">
+          <ul>
+            <li><a href="../mainhome.html">홈</a></li>
+            <!-- <li><a href="#mini">미니실습</a></li> -->
+            <li><a href="../newpost.html">게시글</a></li>
+            <li><a href="guest">방명록</a></li>
+          </ul>
+        </nav>
+      </div>
+    
+      <main>
+    
+    
+        <div class="content">
+          
+            <div id="eleven" class="contents">
+                <h2>11 단원 - 트렌지션과 애니메이션</h2>
+                <h3> 변형(transform, 트랜스폼) : 특정 요소의 크기나 형태 등 스타일이 바뀌는 것</h3>
+                <ul>
+                  <li> 2차원 변형 - 2차원 좌표 사용</li>
+                  <p>2차원 좌표를 사용하며 수평이나 수직으로 웹 요소 변형 (크기나 각도만 지정)</p>
+          
+                  <p>translate (tx, ty) --> 값 만큼 x축,y축으로 이동</p>
+                  <p>translateX (tx) --> x축으로 이동</p>
+                  <p>translateY (ty) --> y축으로 이동</p>
+                  <p>scale (sx, Sy) --> 축과 y으로 확대•숙소</p>
+                  <p>scaleX (sx) --> x속으로 확대 축소</p>
+                  <p>scaleY (sy) --> Y죽으로 확대 축소</p>
+                  <p>rotate (각도) --> 각도만큼 회전</p>
+                  <p>skew (ax, ay) --> x과 y으로 왜곡</p>
+                  <p>skewX (ax) --> x축으로 왜곡</p>
+                  <p>skewY (ay) --> y축으로 왜곡</p>
+                  <br>
+        
+                  <li>3차원 변형 - x축과 y축에 원근감 추가</li>
+                  <p>z축은 앞뒤로 이동. 보는 사람 쪽으로 다가올 수록 값이 더 커짐</p>
+                  
+                  <p>translate3d(tx, ty, tz) --> 지정한 크기만큼 x축, y족, z죽으로 이동</p>
+                  <p>translateZ(tz) --> 지정한 크기만큼 z죽으로 이동</p>
+                  <p>scale3d(sx, sy, sz) --> 지정한 크기만큼 x축, Y축, z축으로 확대,축소</p>
+                  <p>scaleZ(sz) --> 지정한 크기만큼 z죽으로 확대,숙소</p>
+                  <p>rotate(rx, ry, 각도) --> 지정한 각도만큼 회전</p>
+                  <p>rotate3d(rx, ry, rz, 각도) --> 지정한 각도만큼 회전</p>
+                  <p>rotatex(각도) --> 지정한 각도만큼 x죽으로 회전</p>
+                  <p>rotateY(각도) --> 지정한 각도만큼 y죽으로 회전</p>
+                  <p>rotatez(각도) --> 지정한 각도만큼 z죽으로 회전</p>
+                  <p>perspctive(길이) --> 입체적으로 보일수 있도록 깊잇값을 지정</p>
+
+
+
+                  <li>translate 함수 - 지정한 방향으로 이동할 거리를 지정하면 해당 요소를 이동시킴</li>
+                  <p>transform:translate(tx, ty) --> x축 방향으로 tx만큼, y축 방향으로 ty만큼 이동</p>
+                  <p> ㄴ tx와 ty 두 가지 값을 사용하지만 ty 값이 주어지지 않으면 0으로 간주</p>
+                  <p>transform:translate3d(tx, ty, tz) --> x축 방향으로 tx만큼, y축 방향으로 ty만큼, z축 방향(앞뒤)으로 tz만큼 이동.</p>
+                  <p>transform:translateX(tx) --> x축 방향으로 tx만큼 이동.</p>
+                  <p>transform:translateY(ty) --> y축 방향으로 ty만큼 이동</p>
+                  <p>transform:translateZ(tz) --> z축 방향으로 tz만큼 이동</p>
+
+                  <li>scale 함수 - 지정한 크기만큼 요소를 확대/축소</li>
+                  <p>transform:scale(sx, sy) --> 각 방향으로 sx만큼, sy만큼 확대함. sy 값이 주어지지 않는다면 sx 값과 같다고 간주</p>
+                  <p>ㄴ 예) scale(2.0)는 scale(2,2)와 같은 함수이며 요소를 두 배로 확대.</p>
+                  <p>transform:scale3d(sx, sy, sz) --> 각 방향으로 sx만큼, sy만큼, sz만큼 확대</p>
+                  <p>transform:scaleX(sx)x축으로 sx만큼 확대</p>
+                  <p>transform:scaleY(sy) --> y축으로 sy만큼 확대</p>
+                  <p>transform:scaleZ(sz) --> z축으로 sz만큼 확대</p>
+
+                  <li>rotate 함수 - 각도만큼 시계 방향이나 반대 방향으로 회전 </li>
+                  <p>일반 각도(degree)나 래디안(radian) 값 사용(1래디안=1/180°)</p>
+                  <p>transform: rotate(rx, ry, 각도)</p>
+                  <p>transform: rotate3d(rx, ry, rz, 각도)/p>
+                  <p>transform: rotateX(각도)</p>
+                  <p>transform: rotateY(각도)</p>
+                  <p>transform: rotateZ(각도)</p>
+
+                  <li>perspective - 원근감을 표현, 부모요소에 정의 필수</li>
+                  <p>원래 있던 위치에서 사용자가 있는 쪽으로 얼마나 이동하는지 나타냄</p>
+                  <p>값(픽셀 단위)은 0보다 커야 하며 값이 클수록 사용자로부터 멀어짐.</p>
+                  
+
+                  <li>skew 함수 - 지정한 각도만큼 비틀어 왜곡</li>
+                  <p>transform:skewX(ax) --> x축을 따라 당김.</p>
+                  <p>transform:skewY(ay) --> y축을 따라 당김.</p>
+                  <p>transform:skew(ax, ay)각 축을따라 당기는 각도. y축은 값이 없으면 0으로 간주</p>
+
+                  <li>트랜지션 - 웹 요소의 스타일 속성이 조금씩 자연스럽게 바뀜</li>
+                  <p>transition-property : all | none | <속성이름></p>
+
+                  <li>transition-property - 대상 지정, 지정 안하면 모든속성이 트렌지션 됨</li>
+                  <p>all --> all 또는 property 생략할경우 모든속성이 트렌지션 대상이됨. (기본값)</p>
+                  <p>none --> 트렌지션 하는동안 아무속성이 안바뀜</p>
+                  <p>속성 이름 --> 배경색만 바꿀거면 transition-property : background-color 요소와 너비를 변경시 width, height</p>
+
+                  
+                  <li>transition-duration - 실행할 시간 지정</li>
+                  <p></p>
+                  <p>트랜지션이 여러 개라면 쉼표(,)로 구분해 진행 시간 지정</p>
+
+                  <li>transition-timing-function - 시작,중간,끝 속도 지정</li>
+                  <p>ease	처음에는 천천히 시작하고 점점 빨라지다가 마지막엔 천천히 끝냅니다. 기본 값</p>
+                  <p>linear	시작부터 끝까지 똑같은 속도로 진행</p>
+                  <p>ease-in	느리게 시작</p>
+                  <p>ease-out	느리게 끝</p>
+                  <p>ase-in-out	느리게 시작하고 느리게 끝</p>
+                  <p>cubic-bezier(n, n, n, n) 배치에 함수를 정의하여 사용. n은 0~1사이만 사용 가능</p>
+
+                  <li>transition-delay - 지연 시간 지정</li>
+                  <p>시간 단위는 초(seconds), 밀리초(milliseconds)사용</p>
+                  
+                  <li>transition - 관련속성 한번에 지정 가능</li>
+                  <p>transition : transition-property값 transition-duration값 transition-timing-function값 transition-delay값 순서</p>
+
+                  <li>css와 애니메이션 - 애니메이션을 시작해 끝내는 동안 원하는곳 어디서든 스타일을 변경할수 있음</li>
+
+                  <li> @keyframes - 애니메이션의 시작과 끝을 비롯해 상태가 바뀌는 지점을 설정, ‘이름’으로 애니메이션 구분</li>
+                  <p>@keyframes<이름>{ <선택자> {<스타일>}}</p>
+                  <p> @keyframes의 선택자에서 속성값이 바뀌는 지점을 가리킴</p>
+                  <p>시작 위치는 0%, 끝 위치 100%로 놓고 위치 지정</p>
+                  <p>시작과 끝 위치만 사용한다면 from, to 키워드 사용 가능</p>
+
+
+                  <li>animation-name </li>
+                  <p> 어떤 애니메이션을 사용할지 구별</p>
+                  <p>@keyframes 속성에서 만든 애니메이션 ‘이름’을 사용</p>
+                  <p>animation-name: <키프레임 이름> | none</p>
+
+
+                  <li>animation-duratio</li>
+                  <p>애니메이션 실행 시간 설정. 기본값 0</p>
+                  <p>사용 가능한 값은 초(s)나 밀리초(ms)</p>
+                  <p>animation-duratio : <시간></p>
+
+                  <li>animation-direction</li>
+                  <p>애니메이션이 끝난 후 원래 위치로 돌아가거나 반대 방향으로 실행하도록 지정</p>
+                  <p>nomal --> 애니메이션이 끝까지 실행하면 원래위치로 돌아감(기본값)</p>
+                  <p>alternate --> 애니메이션이 끝까지 실행하면 왔던 방항으로 되돌아 가면서 애니메이션 실행</p>
+
+                  <li>animation-iteration-count</li>
+                  <p>애니메이션 반복 횟수 지정</p>
+                  <p>숫자 --> 반복 횟수</p>
+                  <p>infinite --> 무한반복</p>
+
+
+                  <li>animation-timing-function</li>
+                  <p>애니메이션 속도 곡선 지정</p>
+
+                  <li>여러 개의 애니메이션 속성을 하나의 속성으로 줄여서 사용</li>
+                  <p>지정하지 않은 속성은 기본 값 사용</p>
+                  <p>animation-duration 속성 값은 반드시 지정해야 함</p>
+                  
+                  
+                  
+                  <br><br><br><br><br><br><br><br><br>
+
+
+
+        
+                </ul>
+              </div>
+        </div>
+
+        <div class="sidebar">
+            <!-- <aside class="profile">
+              <img src="../img/강아지.jpg" alt="프로필 사진" class="profile-img">
+              <p id="username">전효정</p>
+              <a href="https://github.com/kyn04221" target="_blank">
+                <img src="../img/깃허브그레이.PNG" alt="깃허브" class="profile-png"></a>
+              <p id="myself">안녕하세요 자기소개 입니다</p> -->
+            </aside>
+      
+            <nav class="category">
+              <ul class="tt_category">
+                <li class=""><a href="/category" class="link_tit"> 게시글 전체보기 </a>
+                  <ul class="category_list">
+                    <li class><a href="../post2.html" class="link_item"> 미니 실습 ! </a>
+                      <ul class="sub_category_list">
+                        <li class=""><a href="menulist.html" class="link_sub_item"> 점메추 </a></li>
+                        <li class=""><a href="unit13.html" class="link_sub_item"> 13 단원 </a></li>
+                        <li class=""><a href="unit12.html" class="link_sub_item"> 12 단원 </a></li>
+                        <li class=""><a href="unit11.html" class="link_sub_item"> 11 단원 </a></li>
+                        <li class=""><a href="unit10.html" class="link_sub_item"> 10 단원 </a></li>
+                        <li class=""><a href="unit9.html" class="link_sub_item"> 9단원 </a></li>
+                        <li class=""><a href="unit8.html" class="link_sub_item"> 8단원 </a></li>
+                        <li class=""><a href="unit7.html" class="link_sub_item"> 7 단원 </a></li>
+                        <li class=""><a href="unit6.html" class="link_sub_item"> 6 단원 </a></li>
+                        <li class=""><a href="unit5.html" class="link_sub_item"> 5 단원 </a></li>
+                        <li class=""><a href="unit4.html" class="link_sub_item"> 4 단원 </a></li>
+                        <li class=""><a href="unit3.html" class="link_sub_item"> 3 단원 </a></li>
+                        <li class=""><a href="unit1-2.html" class="link_sub_item"> 1~2 단원 </a></li>
+                      </ul>
+                    </li>
+      
+                    <li class><a href="/category/Front-End" class="link_item"> 사부작 사부작 </a>
+                      <ul class="sub_category_list">
+                        <li class=""><a href="../test/todo-list.html" class="link_sub_item"> todo list</a></li>
+                       <li class=""><a href="" class="link_sub_item"> before : minihompee </a></li>
+                       <li class=""><a href="" class="link_sub_item"> wtudy with us ! </a></li>
+                      </ul>
+                    </li>
+      
+                  </ul>
+                </li>
+              </ul>
+      
+            </nav>
+          </div>
+
+
+      </main>
+    
+</body>
+</html>

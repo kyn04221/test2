@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점심메뉴</title>
+    <link rel="stylesheet" href="../../css/menulist.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="../mainhome.html">my mini hompee !</a></h1>
+    </header>
+
+    <div class="container">
+        <nav class="navi">
+            <ul>
+                <li><a href="../mainhome.html">홈</a></li>
+                <!-- <li><a href="#mini">미니실습</a></li> -->
+                <li><a href="../newpost.html">게시글</a></li>
+                <li><a href="../guest">방명록</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+
+
+
+        <div class="content">
+            <p class="all"> 점심메뉴 리스트</p>
+
+            <!-- 게시글 카드들 div -->
+
+            <div class="origin">
+                <div id="rotatey">
+                    <a>
+                        <div class="post-item">
+                            <div class="front">
+                                <div class="thum">
+                                    <img src="../../img/스구식탁.jpeg" alt="Thumbnail">
+                                </div>
+                                <div class="title">스구식탁</div>
+                                <div class="excerpt">깔끔하고 혼밥하기 좋은 샤브샤브 맛집</div>
+                                <div class="meta">작성일: 2024-10-13</div>
+                            </div>
+                            <div class="back">
+
+                                <div class="left">메뉴 리스트!
+                                    <ul>
+                                        <li>샤브샤브</li>
+                                    </ul>
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- <div class="back">
+                <div class="title">뒷면의 내용입니다.</div>
+            </div> -->
+
+
+
+            <a>
+                <div class="post-item">
+                    <div class="thum">
+                        <img src="../../img/딤타오.jpg" alt="Thumbnail">
+                    </div>
+                    <div class="title">딤타오 </div>
+                    <div class="excerpt">딤섬이 맛있는 맛집</div>
+                    <div class="meta">작성일: 2024-10-10</div>
+                </div>
+            </a>
+
+            <a>
+                <div class="post-item">
+                    <div class="thum">
+                        <img src="../../img/은화수식당.jpeg" alt="Thumbnail">
+                    </div>
+                    <div class="title">은화수 식당</div>
+                    <div class="excerpt">돈까스와 카레가 맛있는 맛집</div>
+                    <div class="meta">작성일: 2024-10-13</div>
+                </div>
+            </a>
+
+
+
+
+        </div><!-- 게시글 카드들 div -->
+
+
+        <div class="sidebar">
+
+            <!--  프로필 아래 구간-->
+            <nav class="category">
+                <ul class="tt_category">
+                    <li class=""><a href="/category" class="link_tit"> 게시글 전체보기 </a>
+                        <ul class="category_list">
+                            <li class><a href="post2.html" class="link_item"> 미니 실습 ! </a>
+                                <ul class="sub_category_list">
+                                    <li class=""><a href="unit/menulist.html" class="link_sub_item"> 점메추 </a></li>
+                                    <li class=""><a href="unit/unit13.html" class="link_sub_item"> 13 단원 </a></li>
+                                    <li class=""><a href="unit/unit12.html" class="link_sub_item"> 12 단원 </a></li>
+                                    <li class=""><a href="unit/unit11.html" class="link_sub_item"> 11 단원 </a></li>
+                                    <li class=""><a href="unit/unit10.html" class="link_sub_item"> 10 단원 </a></li>
+                                    <li class=""><a href="unit/unit9.html" class="link_sub_item"> 9단원 </a></li>
+                                    <li class=""><a href="unit/unit8.html" class="link_sub_item"> 8단원 </a></li>
+                                    <li class=""><a href="unit/unit7.html" class="link_sub_item"> 7 단원 </a></li>
+                                    <li class=""><a href="unit/unit6.html" class="link_sub_item"> 6 단원 </a></li>
+                                    <li class=""><a href="unit/unit5.html" class="link_sub_item"> 5 단원 </a></li>
+                                    <li class=""><a href="unit/unit4.html" class="link_sub_item"> 4 단원 </a></li>
+                                    <li class=""><a href="unit/unit3.html" class="link_sub_item"> 3 단원 </a></li>
+                                    <li class=""><a href="unit/unit1-2.html" class="link_sub_item"> 1~2 단원 </a></li>
+                                </ul>
+                            </li>
+
+                            <li class><a href="/category/Front-End" class="link_item"> 사부작 사부작 </a>
+                                <ul class="sub_category_list">
+                                    <li class=""><a href="test/todo-list.html" class="link_sub_item"> todo list</a>
+                                    </li>
+                                    <li class=""><a href="" class="link_sub_item"> before : minihompee </a></li>
+                                    <li class=""><a href="" class="link_sub_item"> wtudy with us ! </a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div>
+    </main>
+    <script>
+        var atag = document.getElementById('rotatey');
+        var trans = false;
+
+        atag.onclick = function () {
+            if (!trans) {
+                atag.style.perspective = '200px';
+                atag.style.transform = 'rotateY(180deg)';
+                // atag.style.backfaceVisibility= 'hidden';
+            } else {
+                atag.style.transform = 'rotateY(0deg)';
+            }
+            trans = !trans;
+            atag.style.transition = 'transform 0.6s';
+        };
+    </script>
+
+</body>
+
+</html>
+

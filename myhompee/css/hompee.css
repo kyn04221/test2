@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    /* 밝은 배경색 */
+    color: #333;
+    /* 어두운 글씨 색 */
+    line-height: 1.6;
+}
+
+
+header {
+    display: flex;
+    width: 970px;
+    /* width: 800px; */
+    /* text-align: center; 타이틀을 중앙 정렬 */
+    margin-top: 20px;
+    /* margin-bottom: 20px; 타이틀과 본문 사이 간격 */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 23%;
+    /* padding-left: %; */
+    margin-right: 20%;
+}
+
+h1 {
+    color: #E65C50;
+    font-size: 15px;
+    /* 타이틀 크기 키우기 */
+    font-weight: bold;
+    margin: 0;
+    padding: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    /* 둥근 모서리 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* 가벼운 그림자 */
+    display: inline-block;
+    /*텍스트가 가운데에 고정되도록 inline-block 추가*/
+
+}
+
+a {
+    color: #E65C50;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    /* width: 100%; */
+    margin-top: 10px;
+    justify-content: center;
+
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #ffffff;
+    /* 사이드바 배경색 */
+    padding: 20px;
+    border-radius: 10px;
+    /* 둥근 모서리 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* 그림자 */
+    margin-left: 5%;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    /* 둥근 모서리 */
+    background-color: #f9f9f9;
+    /* 프로필 배경색 */
+    padding: 15px;
+
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    color: #FF6F61;
+    /* 링크 색상 */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #E65C50;
+    /* 링크 호버 색상 */
+}
+
+main {
+    
+    padding: 20px;
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 20px;
+    max-width: 800px;
+
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+
+}
+
+section {
+    background-color: #ffffff;
+    /* 섹션 배경색 */
+    border-radius: 10px;
+    /* 둥근 모서리 */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* 섹션 그림자 */
+}
+
+h2 {
+    color: #FF6F61;
+    /* 섹션 제목 색상 */
+    margin-bottom: 15px;
+}
+
+.intro,
+.blog {
+    width: calc(50% - 10px);
+    /* 각 섹션 너비 */
+    margin-right: 15px;
+}
+
+.guestbook {
+    width: 40%;
+    /* 방명록 너비 */
+    background-color: #ffffff;
+    /* 방명록 배경색 */
+    border-radius: 10px;
+    /* 둥근 모서리 */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* 방명록 그림자 */
+}
+
+.messages {
+    flex-grow: 1;
+    /* 메시지 목록이 대부분 공간을 차지 */
+    overflow-y: auto;
+    /* 스크롤 가능 */
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* 안쪽 그림자 */
+    margin-top: 20px;
+    margin-bottom: 3px;
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.message {
+    background: #D3D3D3;
+    /* 메시지 배경색 */
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+gmessage {
+    margin: 0px;
+}
+
+form {
+    /* display: flex; */
+    justify-content: flex-start;
+    /* 왼쪽 정렬 */
+    align-items: center;
+    /* 세로 가운데 정렬 */
+    /* align-items: flex-start; */
+    gap: 5px;
+
+    /* flex-direction: column; */
+}
+input[type="text"]{
+    width: 50px;
+    height: 20px;
+}
+
+
+label[for="message"]{
+     display: flex;
+    align-items: flex-start; /* 메시지와 텍스트 영역 수직 중앙 정렬 */
+    margin-bottom: 8px;
+}
+
+form label {
+    margin: 5px 0;
+    font-size: 0.8rem;
+    /* 글씨 크기 줄이기 */
+    display: block;
+
+}
+
+form input,
+form textarea {
+    padding: 6px;
+    /* 입력란 높이 줄이기 */
+    margin-bottom: 0px;
+    font-size: 0.85rem;
+    /* 텍스트 크기 줄이기 */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 85px;
+    /* 입력란 너비 전체로 확장 */
+}
+
+/* 버튼 크기 및 디자인 */
+form button {
+    padding: 8px;
+    /* 버튼 크기 줄이기 */
+    background: #FF6F61;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #E65C50;
+}
+
+.gallery {
+    background-color: #ffffff;
+    /* 갤러리 배경색 */
+    border-radius: 10px;
+    /* 둥근 모서리 */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* 갤러리 그림자 */
+}
+
+.gallery-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gallery-container img {
+    width: calc(33.33% - 10px);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #FF6F61;
+    /* 푸터 배경색 */
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+@media(max-width :1075px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        /* 세로 정렬 */
+        justify-content: center;
+        /* 세로 가운데 정렬 */
+        align-items: center;
+        /* 가로 가운데 정렬 */
+
+    }
+
+    .intro,
+    .blog,
+    .guestbook,
+    .gallery {
+        width: 100%;
+    }
+}
+
+@media(max-width :600px) {
+    header {
+        width: 100%;
+        display: flex;
+        margin-right: 0%;
+        margin-left: 0%;
+        padding: 0%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        /* 세로 정렬 */
+        justify-content: center;
+        /* 세로 가운데 정렬 */
+        align-items: center;
+        /* 가로 가운데 정렬 */
+
+    }
+
+    .sidebar {
+        display: flex;
+        width: calc(100% - 60px);
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3%;
+        margin-left:20px;
+        margin-right:50px;
+        padding-right: 20px;
+        padding: 0px;
+        
+        /*margin-right:20%; */
+
+    }
+
+    .profile {
+        width: 30%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: 0px;
+        padding-top: 30px;
+        background-color: #ffffff;
+        position: relative;
+
+    }
+
+    .nav {
+        width: 70%;
+        flex-direction: column;
+        display: flex;
+        padding: 0px;
+        position: relative;
+        left: 30px;
+    }
+
+    .intro,
+    .blog,
+    .guestbook,
+    .gallery {
+        width: 100%;
+    }
+}
+
+/* @media(min-width :1075px) {
+    header{
+        max-width: 920px;
+        margin-right: 0%;
+        margin-left: 20%;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+} */
