@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/study.css">
+    <title>공부중!</title>
+</head>
+<body>
+    <header>
+        <h1>공부중!</h1>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="profile.jpg" alt="Profile Picture">
+                <h2>사용자 이름</h2>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">프로젝트</a></li>
+                        <li><a href="#">설정</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="main">
+            <div class="new-entry">
+                <input type="text" id="entry-title" placeholder="제목을 입력하세요">
+                <textarea id="entry-content" placeholder="내용을 입력하세요"></textarea>
+                <button id="add-button">추가</button>
+            </div>
+            <div id="study-list" class="study-list">
+                <!-- 공부 항목이 추가될 곳 -->
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 내 공부중 페이지
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

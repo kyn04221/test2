@@ -1,0 +1,187 @@
+/* 전체 레이아웃 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+/* 상단 타이틀 중앙 정렬 */
+header {
+    width: 100%;
+    text-align: center; /* 타이틀을 중앙 정렬 */
+    margin: 25px; /* 타이틀과 본문 사이 간격 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #007bff;
+    font-size: 50px; /* 타이틀 크기 키우기 */
+    font-weight: bold;
+    margin: 0;
+    padding: 15px;
+    background-color: #f0f8ff; /* 배경을 밝은 하늘색으로 지정 */
+    border-radius: 8px; /* 둥근 모서리 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 */
+    display: inline-block; /* 텍스트가 가운데에 고정되도록 inline-block 추가 */
+}
+
+/* 메인 레이아웃 */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin-top: 35px;
+}
+#profile-menu-container {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    margin-right: 40px; /* 스터디 그룹과의 간격 */
+}
+
+/* 왼쪽 프로필 섹션 */
+#profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+    width: 150px; /* 1:4 비율 */
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    /* border: 2px solid #007bff; */
+}
+
+#username {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+#myself{
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+/* 스터디그룹 컨테이너 */
+/* 스터디 그룹 생성 박스 스타일 */
+
+#my-study-groups{
+
+    width: 75%;
+}
+#create-study-group {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+#group-purpose, #group-name, #group-duration, #max-members, #group-schedule{
+    width:95%;
+}
+
+/* 제목 스타일 */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 라벨 스타일 */
+label {
+    display: block;
+    margin: 10px 0 6px;
+}
+
+/* 입력 및 선택 필드 스타일 */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 버튼 스타일 */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 버튼 호버 효과 */
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* 메뉴 추가함 !!! */
+
+/* 메뉴 스타일 */
+/* 메뉴 섹션 */
+#menu-section {
+    width: 150px; /* 프로필 섹션과 같은 너비 */
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; /* 프로필과 간격 조정 */
+    margin-right: 40px;}
+
+/* 메뉴 제목 */
+#menu-section h2 {
+    text-align: left;
+    font-size: 20px;
+    color: #007bff;
+    margin: 0 0 10px 0; /* 제목과 리스트 간격 조정 */
+}
+
+/* 메뉴 리스트 스타일 */
+#menu-list {
+    list-style-type: none; /* 리스트 점 제거 */
+    padding: 0; /* 패딩 제거 */
+}
+
+/* 메뉴 항목 스타일 */
+#menu-list li {
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0; /* 각 항목 아래에 경계선 추가 */
+    cursor: pointer; /* 커서 변경 */
+    transition: background-color 0.2s; /* 호버 시 배경색 전환 효과 */
+}
+
+#menu-list li:hover {
+    background-color: #f0f0f0; /* 호버 시 배경색 변화 */
+}
+
+/* 마지막 항목 아래 경계선 제거 */
+#menu-list li:last-child {
+    border-bottom: none;
+}
+
+

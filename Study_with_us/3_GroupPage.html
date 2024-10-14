@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스터디 메인페이지</title>
+    <link rel="stylesheet" href="3_GroupPage.css">
+</head>
+
+<body>
+    <header>
+        <h1>스터디 그룹</h1>
+    </header>
+
+    <main>
+
+        <div class="header">
+            <button id="study-with-us-btn" class="blue-btn">Study with us!</button>
+        </div>
+
+
+        <section id="left-section">
+            <div id="profile-section">
+                <img src="blue.jpg" alt="프로필 사진" id="profile-pic">
+                <p id="username">전효정</p>
+                <button id="join-button">참여하기</button>
+            </div>
+
+            <div id="members-section">
+
+
+                <h2>내 동아리 현황</h2>
+                <ul id="club-status-list">
+                    <li>스터디 A</li>
+                    <li>스터디 B</li>
+                    <li>스터디 C</li>
+                    <!-- 필요한 만큼 동아리명 추가 -->
+
+
+                <!-- <h2>스터디 멤버들</h2>
+                <div id="online-members">
+                    <h3>온라인</h3>
+                    <div class="member">
+                        가나다 <span class="status-dot online"></span>
+                    </div>
+                    <div class="member">
+                        라마바 <span class="status-dot online"></span>
+                    </div>
+                </div> -->
+
+                <!-- <div id="offline-members">
+                    <h3>오프라인</h3>
+                    <div class="member">
+                        사아자 <span class="status-dot offline"></span>
+                    </div>
+                    <div class="member">
+                        차카타 <span class="status-dot offline"></span>
+                    </div>
+                </div> -->
+
+            </div>
+        </section>
+
+        <section id="right-section">
+            <div id="notice-board">
+                <h2>공지사항</h2>
+                <p>여기에 공지사항 내용을 입력하세요.</p>
+            </div>
+
+            <div id="bulletin-board">
+                <h2>게시판</h2>
+                <p>여기에 게시판 내용을 입력하세요.</p>
+            </div>
+        </section>
+
+        <section id="club-status-section">
+            <!-- <h2>내 동아리 현황</h2>
+            <ul id="club-status-list">
+                <li>스터디 A</li>
+                <li>스터디 B</li>
+                <li>스터디 C</li>
+                필요한 만큼 동아리명 추가 
+            </ul> -->
+
+            <h2>멤버</h2>
+                <div id="online-members">
+                    <h3>온라인</h3>
+                    <div class="member">
+                        가나다 <span class="status-dot online"></span>
+                    </div>
+                    <div class="member">
+                        라마바 <span class="status-dot online"></span>
+                    </div>
+                </div>
+                <div id="offline-members">
+                    <h3>오프라인</h3>
+                    <div class="member">
+                        사아자 <span class="status-dot offline"></span>
+                    </div>
+                    <div class="member">
+                        차카타 <span class="status-dot offline"></span>
+                    </div>
+                </div>
+
+        </section>
+
+        <script>
+
+            // Study with us! 버튼 클릭 시 2_main.html로 돌아가기
+            document.getElementById('study-with-us-btn').addEventListener('click', function () {
+                window.location.href = '2_main.html';  // 클릭 시 2_main 페이지로 이동
+            });
+
+            window.onload = function () {
+                const params = new URLSearchParams(window.location.search);
+                const groupName = params.get('groupName');
+                if (groupName) {
+                    document.querySelector('header h1').textContent = groupName;
+                }
+            };
+
+            window.onload = function () {
+    const params = new URLSearchParams(window.location.search);
+    const groupName = params.get('groupName');
+    if (groupName) {
+        // 동아리 현황 리스트에 추가
+        const clubStatusList = document.getElementById('club-status-list');
+        const listItem = document.createElement('li');
+        listItem.textContent = groupName;  // 그룹명 추가
+        clubStatusList.appendChild(listItem);
+        
+        // 헤더 제목 업데이트
+        document.querySelector('header h1').textContent = groupName;
+    }
+};
+
+
+
+        </script>
+    </main>
+</body>
+
+</html>

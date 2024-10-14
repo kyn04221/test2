@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 미니홈피</title>
+    <link rel="stylesheet" href="css/hompee.css">
+</head>
+
+<body>
+    <header>
+        <h1>my hompee !</h1>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <!-- <div class="abc"> -->
+                <div class="profile">
+                    <img src="img/강아지.jpg" alt="프로필 이미지">
+                    <h2>전효정</h2>
+                    <p>자기소개</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#intro">공부중 ! </a></li>
+                        <li><a href="#blog">블로그</a></li>
+                        <li><a href="#gallery">갤러리</a></li>
+                        <li><a href="#contact">연락처</a></li>
+                    </ul>
+                </nav>
+            <!-- </div> -->
+
+        </aside>
+
+        <main>
+            <div class="content">
+                <section class="intro" id="intro">
+                    <h2><a href="#intro">공부중 !</a></h2>
+                    <p>html</p>
+                    <p>css</p>
+                    <p>javascript</p>
+                    <p></p>
+                </section>
+
+                <section class="blog" id="blog">
+                    <h2>블로그</h2>
+                    <article class="post">
+                        <h3>첫 번째 포스트</h3>
+                        <p>포스트의 요약 내용입니다. 이곳에 본문의 일부 내용을 작성할 수 있습니다.</p>
+                        <a href="#">더 읽기</a>
+                    </article>
+                    <article class="post">
+                        <h3>두 번째 포스트</h3>
+                        <p>포스트의 요약 내용입니다. 이곳에 본문의 일부 내용을 작성할 수 있습니다.</p>
+                        <a href="#">더 읽기</a>
+                    </article>
+                    <article class="post">
+                        <h3>세 번째 포스트</h3>
+                        <p>포스트의 요약 내용입니다. 이곳에 본문의 일부 내용을 작성할 수 있습니다.</p>
+                        <a href="#">더 읽기</a>
+                    </article>
+                </section>
+
+                <section class="guestbook">
+                    <h2>방명록</h2>
+                    <div class="messages">
+                        <div class="message">방명록 1 번째 메시지 내용</div>
+                        <div class="message">방명록 2 번째 메시지 내용</div>
+                        <div class="message">방명록 3 번째 메시지 내용</div>
+                        <div class="message">방명록 4 번째 메시지 내용</div>
+                        <div class="message">방명록 5 번째 메시지 내용</div>
+                        <div class="message">방명록 6 번째 메시지 내용</div>
+                        <div class="message">방명록 7 번째 메시지 내용</div>
+                    </div>
+
+                    <form>
+                        <label for="name">이름: </label>
+                        <input type="text" id="name" required>
+                        <button type="submit">보내기</button>
+
+                        <label for="message">메시지: <textarea id="message" required></textarea></label>
+                        
+                        
+                    </form>
+                </section>
+
+            </div>
+
+            <section class="gallery" id="gallery">
+                <h2>갤러리</h2>
+                <div class="gallery-container">
+                    <img src="image1.jpg" alt="갤러리 이미지 1">
+                    <img src="image2.jpg" alt="갤러리 이미지 2">
+                    <img src="image3.jpg" alt="갤러리 이미지 3">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 내 미니홈피. 모든 권리 보유.</p>
+    </footer>
+</body>
+
+</html>

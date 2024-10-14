@@ -1,0 +1,170 @@
+/* 전체 레이아웃 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+/* 상단 타이틀 중앙 정렬 */
+header {
+    width: 100%;
+    text-align: center; /* 타이틀을 중앙 정렬 */
+    margin: 25px; /* 타이틀과 본문 사이 간격 */
+}
+
+h1 {
+    color: #007bff;
+    font-size: 50px; /* 타이틀 크기 키우기 */
+    font-weight: bold;
+    margin: 0;
+    padding: 15px;
+    background-color: #f0f8ff; /* 배경을 밝은 하늘색으로 지정 */
+    border-radius: 8px; /* 둥근 모서리 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 */
+    display: inline-block; /* 텍스트가 가운데에 고정되도록 inline-block 추가 */
+}
+
+/* 메인 레이아웃 */
+main {
+    display: flex;
+    width: 80%;
+    margin-top: 35px;
+}
+#left {
+    display: flex;
+    flex-direction: column; /* 프로필과 오프라인를 하나로 묶어서 세로정렬함 !!*/
+    margin-right: 40px; /* 스터디 그룹과의 간격 */
+}
+
+/* 왼쪽 프로필 섹션 */
+#profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+    width: 150px; /* 1:4 비율 */
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+#username {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* 오프라인 멤버 박스 스타일링 */
+#offline-members-box {
+    margin-top: 20px; /* 프로필과 오프라인 멤버 박스 사이의 간격 */
+    padding: 20px; /* 내부 여백 */
+    background-color: #f9f9f9; /* 밝은 배경색 */
+    border-radius: 12px; /* 둥근 모서리 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 */
+    width: 150px; /* 프로필과 동일한 너비 */
+    text-align: center; /* 중앙 정렬 */
+}
+
+/* 오프라인 멤버들 제목 스타일 */
+#offline-members-box h3 {
+    font-size: 18px;
+    color: #007bff;
+    margin-bottom: 15px; /* 제목과 리스트 사이 간격 */
+}
+
+/* 오프라인 멤버 스타일 */
+#offline-members {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    gap: 10px; /* 멤버 간의 간격 */
+}
+
+/* 오프라인 멤버 개별 스타일 */
+#offline-members .member {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff; /* 멤버 개별 박스의 배경색 */
+    border-radius: 8px; /* 둥근 모서리 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 */
+}
+
+#offline-members .member-pic {
+    width: 40px; /* 프로필 사진 크기 조정 */
+    height: 40px;
+    border-radius: 50%; /* 둥근 프로필 */
+    margin-right: 10px; /* 프로필 사진과 이름 간격 */
+}
+
+#offline-members .member-name {
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* 스터디 그룹 멤버 리스트 */
+#study-group-details {
+    flex-grow: 1; /* 나머지 공간 차지 */
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 멤버 리스트 스타일 */
+#member-list {
+    display: flex;
+    flex-wrap: wrap; /* 가로 정렬 */
+    gap: 15px; /* 멤버 간의 간격 */
+}
+
+/* 멤버 스타일 */
+.member {
+    display: flex;
+    align-items: center;
+}
+
+.member-pic {
+    width: 50px; /* 프로필 사진 너비 */
+    height: 50px; /* 프로필 사진 높이 */
+    border-radius: 50%; /* 둥근 형태 */
+    margin-right: 10px; /* 사진과 이름 간격 */
+}
+
+.member-name {
+    font-size: 16px; /* 멤버 이름 크기 */
+    color: #333; /* 글자 색상 */
+}
+
+/* 닫기 버튼 */
+#join-button {
+    margin-top: 20px; /* 멤버 리스트와 간격 조정 */
+    padding: 10px 15px; /* 버튼 패딩 */
+    background-color: #007bff; /* 버튼 배경색 */
+    color: white; /* 버튼 글자 색상 */
+    border: none; /* 경계선 제거 */
+    border-radius: 6px; /* 둥근 모서리 */
+    cursor: pointer; /* 커서 변경 */
+    transition: background-color 0.2s; /* 배경색 전환 효과 */
+}
+
+#join-button:hover {
+    background-color: #0056b3; /* 호버 시 배경색 변화 */
+}
+
+

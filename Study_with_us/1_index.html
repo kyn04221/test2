@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study with us</title>
+    <link rel="stylesheet" href="1_index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Study with us</h1>
+    </header>
+
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+
+                <button type="submit">Login</button>
+                <p>아직 회원이 아니신가요? <a href="#signup">Join</a></p>
+            </form>
+        </section>
+
+        <section id="signup" style="display: none;">
+            <h2>회원가입</h2>
+            <form id="signup-form">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" required>
+
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" required>
+
+                <label for="confirm-password">Password Again:</label>
+                <input type="password" id="confirm-password" required>
+
+                <button type="submit">Join</button>
+                <p>이미 회원이신가요? <a href="#login">Login</a></p>
+            </form>
+        </section>
+
+        <section id="profile" style="display: none;">
+            <h2>내 프로필</h2>
+            <form>
+                <label for="username">사용자 이름:</label>
+                <input type="text" id="username" required>
+
+                <label for="bio">자기소개:</label>
+                <textarea id="bio" rows="4"></textarea>
+
+                <button type="submit">저장하기</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        const loginSection = document.getElementById('login');
+        const signupSection = document.getElementById('signup');
+
+        // 로그인 폼 처리
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+            e.preventDefault();  // 폼 제출 막기
+
+            const emailInput = document.getElementById('email').value;
+            const passwordInput = document.getElementById('password').value;
+
+            // 로컬 스토리지에서 저장된 이메일과 비밀번호 불러오기
+            const storedEmail = localStorage.getItem('signupEmail');
+            const storedPassword = localStorage.getItem('signupPassword');
+
+            // 유효성 검사
+            if (emailInput === storedEmail && passwordInput === storedPassword) {
+                // 로그인 성공 시 메인 페이지로 이동
+                window.location.href = "2_main.html";  // 2_main.html로 리다이렉트
+            } else {
+                // 로그인 실패 시 경고 메시지
+                alert("아이디 또는 비밀번호가 올바르지 않습니다.");
+            }
+        });
+
+        // 회원가입 폼 처리
+        document.getElementById('signup-form').addEventListener('submit', function (e) {
+            e.preventDefault();  // 폼 제출 막기
+
+            const signupEmail = document.getElementById('signup-email').value;
+            const signupPassword = document.getElementById('signup-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            // 비밀번호 일치 여부 확인
+            if (signupPassword !== confirmPassword) {
+                alert("비밀번호가 일치하지 않습니다.");
+                return;
+            }
+
+            // 회원가입 정보 로컬 스토리지에 저장
+            localStorage.setItem('signupEmail', signupEmail);
+            localStorage.setItem('signupPassword', signupPassword);
+
+            alert("회원가입이 완료되었습니다!");
+
+            // 회원가입 완료 후 로그인 페이지로 이동
+            signupSection.style.display = 'none';
+            loginSection.style.display = 'block';
+            loginSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // 링크 클릭 시 섹션 전환 (회원가입/로그인)
+        document.querySelector('a[href="#signup"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            loginSection.style.display = 'none';
+            signupSection.style.display = 'block';
+            signupSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.querySelector('a[href="#login"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            signupSection.style.display = 'none';
+            loginSection.style.display = 'block';
+            loginSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>

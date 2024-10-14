@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyGroup</title>
+    <link rel="stylesheet" href="studygrop.css">
+</head>
+
+<body>
+    <header>
+        <h1>스터디 그룹</h1>
+    </header>
+
+    <main>
+        <div id="left">
+
+            <aside id="profile-section">
+                <img src="blue.jpg" alt="내 프로필 사진" id="profile-pic">
+                <p id="username">전효정</p>
+                <button id="join-button">참여하기</button>
+            </aside>
+
+            <!-- 오프라인 멤버 섹션을 별도의 박스로 분리 -->
+            <aside id="offline-members-box">
+                <h3>오프라인 멤버들</h3>
+                <div id="offline-members">
+                    <div class="member">
+                        <img src="blue.jpg" alt="멤버 1" class="member-pic">
+                        <p class="member-name">김철수</p>
+                    </div>
+                    <div class="member">
+                        <img src="blue.jpg" alt="멤버 2" class="member-pic">
+                        <p class="member-name">이영희</p>
+                    </div>
+                    <div class="member">
+                        <img src="blue.jpg" alt="멤버 3" class="member-pic">
+                        <p class="member-name">박민수</p>
+                    </div>
+                    <!-- 추가 멤버 -->
+                </div>
+            </aside>
+
+        </div>
+
+
+        <!-- 스터디 그룹 상세 정보 -->
+        <div id="study-group-details">
+            <h2>스터디 그룹 참여 멤버들</h2>
+            <div id="member-list"></div>
+        </div>
+    </main>
+
+    <script>
+        const joinButton = document.getElementById('join-button');
+        const memberList = document.getElementById('member-list');
+        const offlineMembersContainer = document.getElementById('offline-members');
+
+        const offlineMembers = offlineMembersContainer.querySelectorAll('.member');
+
+        joinButton.addEventListener('click', function () {
+            // 본인 프로필 추가
+            const myMember = document.createElement('div');
+            myMember.classList.add('member');
+            myMember.innerHTML = `
+        <img src="blue.jpg" alt="내 프로필" class="member-pic">
+        <p class="member-name">전효정</p>
+    `;
+            memberList.appendChild(myMember);
+
+            // 버튼 텍스트 변경
+            this.textContent = '참여중'; // 버튼 텍스트 변경
+            this.disabled = true; // 버튼 비활성화
+            this.style.backgroundColor = '#28a745'; // 색상 변경
+
+            // 오프라인 멤버에서 본인 제거
+            const offlineMembers = document.querySelectorAll('#offline-members .member');
+            offlineMembers.forEach(member => {
+                const memberName = member.querySelector('.member-name').textContent;
+                if (memberName === '전효정') {
+                    member.remove(); // 오프라인 리스트에서 본인 제거
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
+
+

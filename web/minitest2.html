@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="userId" type="text" placeholder="ID를 입력해주세요" size="40" />
+    <input id="userPassword" type="text" placeholder="PASSWORD를 입력해주세요" size="40" />
+    <input type="button" value="로그인" onclick="show()">
+    
+    
+    <p id="log"></p>
+    
+    <script>
+        function show(){
+            const id=document.getElementById("userId").value;
+            const password =document.getElementById("userPassword").value;
+            
+            
+            // alert("아이디: " + id + ", 패스워드: " + password)
+            // document.getElementById("log").textContent = "아이디: " + id + ", 패스워드: " + password
+            document.getElementById("log").innerText = "아이디: " + id + ", 패스워드: " + password
+        }
+
+    </script>
+</body>
+</html>

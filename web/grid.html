@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <!-- css설정 -->
+  <style>
+    #grid {
+      border: 5px solid pink;
+      /*반응형으로, 한행에서 나란히 배치하는 구조*/
+      display: grid;
+      /*1열 고정길이, 2열 한행 나머지 전체길이
+      1fr, 1fr 은 1:1 비율 2fr 1fr 은 2:1 비율*/
+      grid-template-columns: 150px 1fr;
+    }
+
+    div {
+      border: 5px solid gray;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>화면 배치 작업 연습, grid 나열해보기.</h1>
+  <!-- css적용 -->
+  <div id="grid">
+    <div>NAVIGATION</div>
+    <div>ARTICLE</div>
+  </div:id=grid>
+
+</body>
+
+</html>

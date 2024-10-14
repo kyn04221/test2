@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB1 - HTML </title>
+    <meta charset="utf-8">
+    <style>
+        /*CSS*/
+        /*모든 a태그 속성*/
+        a {
+            color: blue;
+            /*이부분이 없으면 미방문 -파랑 방문 - 보라로 됨*/
+            text-decoration: none;
+            /*언더라인 없음*/
+        }
+
+        /*모든 h1태그 속성*/
+        h1 {
+            font-size: 45px;
+            text-align: center;
+            /*가운데 정렬*/
+        }
+
+        /*클래스명 앞엔 . 붙이기*/
+        /*아래 <li>에 HTML과 CSS와 <h2>에 class="saw"라고 한클래스로 지정함*/
+        /*클래스 속성 면경*/
+
+        /* .active{
+        color: red;
+    } */
+
+        /*클래스보다 id가 우선순위가 높음*/
+        #active {
+            color: red;
+        }
+
+        /*하나의 태그에 효과가 다른 두 클래스를 중첩하면 우선순위로 효과 나타남
+      아래쪽 클래스가 더 우선순위가 높음*/
+
+        .saw {
+            color: green;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <ol>
+        <li><a href="1.html" class="saw">HTML</a></li>
+        <li><a href="2.html" class="saw" id=active>CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+    </ol>
+    <h2 class="saw">HTML이란 무엇인가?</h2>
+    <p><a href="https://www.w3.org/TR/2011/WD-html5-20110405/" title="HTML5 specification">Hypertext Markup
+            Language(HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web
+        applications.
+        Web browsers receive HTML documents from a web server or from local storage and render the documents into
+        multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for
+        the
+        appearance of the document.</p>
+    <img src="강아지.jpg" width="100%">
+    <p style="margin-top: 40px;">
+        HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as
+        interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents
+        by
+        denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML
+        elements are
+        delineated by tags, written using angle brackets.
+    </p>
+</body>
+
+</html>
+a
